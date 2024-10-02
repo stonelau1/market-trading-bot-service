@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "✨ @republik/market-trading-bot-service",
+			"path": "."
+		},
+		{
+			"name": "🚀 app",
+			"path": "app"
+		},
+		{
+			"name": "infra",
+			"path": "infra"
+		}
+	],
+	"settings": {
+		"window.title": "market-trading-bot-service"
+	}
+}

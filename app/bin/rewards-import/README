@@ -1,0 +1,5 @@
+docker build --build-arg DOCKER_REGISTRY=568014293941.dkr.ecr.ap-southeast-1.amazonaws.com -t rewards-import:latest -f Dockerfile .
+docker tag rewards-import:latest 568014293941.dkr.ecr.ap-southeast-1.amazonaws.com/rewards-import:latest
+aws sso login --profile Production && yarn cdk-sso-sync Production
+aws ecr get-login-password --region ap-southeast-1  --profile Production | docker login --username AWS --password-stdin 568014293941.dkr.ecr.ap-southeast-1.amazonaws.com
+docker push 568014293941.dkr.ecr.ap-southeast-1.amazonaws.com/rewards-import:latest
