@@ -36,10 +36,16 @@ export class MarketTradingBotService extends Construct {
       `${props.serviceStage}/fireblocks/api-key`
     );
 
-    const STOX_ADDRESS = StringParameter.valueForStringParameter(
+    const stoxAddress = StringParameter.valueForStringParameter(
       this,
       `/${props.serviceStage}/market/contract`
     );
+
+    const rpkArbitrumAssetId =
+      StringParameter.valueForStringParameter(
+        this,
+        `/${props.serviceStage}/fireblocks/fireblocks-withdraw-arbitrum-asset-id`
+      );
 
     const CHAIN_ID = props.serviceStage === "production" ? "42161" : "421614";
 
@@ -54,7 +60,8 @@ export class MarketTradingBotService extends Construct {
       environment: {
         FIREBLOCKS_API_SECRET_NAME: fireblocksApiSecret.secretName,
         FIREBLOCKS_API_KEY_NAME: fireblocksApiKey.secretName,
-        STOX_ADDRESS,
+        STOX_ADDRESS: stoxAddress,
+        ASSET_ID: rpkArbitrumAssetId,
         CHAIN_ID,
         NODE_OPTIONS: "--enable-source-maps",
       },
