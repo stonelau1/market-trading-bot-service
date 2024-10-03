@@ -2225,16 +2225,16 @@
   resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-8.3.1.tgz#7753df0cb88d7649becf984a96dd1bd0a26f43e3"
   integrity sha512-FdgpFxY6V6rLZE9mmIBb9hM0xpfvQOSNOLnzolzKwsE1DH+gC7lEKV1p1IbR0lAYyvYd5a4u3qWJzowUkw1bIw==
 
-"@fireblocks/fireblocks-web3-provider@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@fireblocks/fireblocks-web3-provider/-/fireblocks-web3-provider-1.3.1.tgz#9fbdaef10f1f7289371121b8b1ed98338c3d67ca"
-  integrity sha512-XphU7BSuWlrVzqFjfUA1cnCrREGbl5xW5YK4p1RBhPxpghT300hdYVR7dJOvGhbjmUUbIYy4SuYymW0WB/ckdw==
+"@fireblocks/fireblocks-web3-provider@^1.3.7":
+  version "1.3.9"
+  resolved "https://registry.yarnpkg.com/@fireblocks/fireblocks-web3-provider/-/fireblocks-web3-provider-1.3.9.tgz#7253bba7adb39cb9f5599abf0dad1a8f09de2c1e"
+  integrity sha512-wWRj0pjetyE60Cb9TcMxBKpUtiXhFs5IPZbsUOCQCh8sTfnTKW8Uolo0Z7UuFeq8BNtsGeaYNDCtyuUte81wnQ==
   dependencies:
     "@ethersproject/units" "^5.7.0"
     axios "^1.6.2"
     debug "^4.3.4"
     ethers "^5.7.2"
-    fireblocks-sdk "^4.2.0"
+    fireblocks-sdk "^5.18.0"
     https-proxy-agent "^7.0.2"
     web3-providers-http "1.8.0"
 
@@ -4390,14 +4390,6 @@ axios@1.6.3:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
-axios@^0.27.2:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
-  integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
-  dependencies:
-    follow-redirects "^1.14.9"
-    form-data "^4.0.0"
-
 axios@^1.6.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.2.tgz#de67d42c755b571d3e698df1b6504cde9b0ee9f2"
@@ -5991,12 +5983,13 @@ fireblocks-sdk@5.15.1:
     query-string "^7.1.3"
     uuid "^8.3.2"
 
-fireblocks-sdk@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fireblocks-sdk/-/fireblocks-sdk-4.2.0.tgz#31a807c5bdc579a7da50315dbfbe5661e838e2d1"
-  integrity sha512-N3c3TDjvoWhHDydZTpzL5IgOJqSzBuF166s61UpRBH8x0XD/aP/NriqC+nKNwn7I94eSHcp1uCbLsg72br1uFw==
+fireblocks-sdk@^5.18.0:
+  version "5.31.2"
+  resolved "https://registry.yarnpkg.com/fireblocks-sdk/-/fireblocks-sdk-5.31.2.tgz#d00187775d8c8c7575800f00f8ec8027dc59945d"
+  integrity sha512-spM2j6/kfUmuR0YDAo/YSi0hmpNPrivhr0BODxUGnXWD+cMOgSVlOD40w4Tn8qsTqQqhilEMATX+J7IdjzXl/w==
   dependencies:
-    axios "^0.27.2"
+    "@notabene/pii-sdk" "^1.17.0"
+    axios "^1.6.0"
     jsonwebtoken "9.0.0"
     platform "^1.3.6"
     qs "^6.11.0"
@@ -6016,15 +6009,15 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
   integrity sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==
 
-follow-redirects@^1.14.9, follow-redirects@^1.15.4:
-  version "1.15.5"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.5.tgz#54d4d6d062c0fa7d9d17feb008461550e3ba8020"
-  integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==
-
 follow-redirects@^1.15.0:
   version "1.15.3"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.3.tgz#fe2f3ef2690afce7e82ed0b44db08165b207123a"
   integrity sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==
+
+follow-redirects@^1.15.4:
+  version "1.15.5"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.5.tgz#54d4d6d062c0fa7d9d17feb008461550e3ba8020"
+  integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==
 
 for-each@^0.3.3:
   version "0.3.3"
