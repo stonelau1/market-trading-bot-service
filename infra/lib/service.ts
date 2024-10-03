@@ -38,8 +38,8 @@ export class MarketTradingBotService extends Construct {
 
     const stoxAddress = StringParameter.valueForStringParameter(
       this,
-      `/${props.serviceStage}/market/contract`
-    );
+      `/${props.serviceStage}/fireblocks/creator-token-contract-address`
+    )
 
     const rpkArbitrumAssetId =
       StringParameter.valueForStringParameter(
@@ -77,5 +77,8 @@ export class MarketTradingBotService extends Construct {
         reportBatchItemFailures: true,
       })
     );
+
+    fireblocksApiSecret.grantRead(onExecute);
+    fireblocksApiKey.grantRead(onExecute);
   }
 }

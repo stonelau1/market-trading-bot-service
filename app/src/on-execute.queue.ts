@@ -23,6 +23,7 @@ export const onExecute = async ({ Records }: SQSEvent) => {
   assert.ok(process.env.STOX_ADDRESS);
   assert.ok(process.env.ASSET_ID);
 
+
   const CHAIN_ID = Number(process.env.CHAIN_ID);
   const STOX_ADDRESS = process.env.STOX_ADDRESS;
   const ASSET_ID = process.env.ASSET_ID;
